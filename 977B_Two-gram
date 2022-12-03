@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    ll n,c=0;
+    cin>>n;
+    string s,a,b;
+    cin>>s;
+    map<string,ll>m;
+    for(ll i=0;i<n-1;i++){
+        a=s[i];
+        b=s[i+1];
+        m[a+b]++;
+        
+        
+    }
+    for(auto it:m){
+        c=max(c,it.second);
+
+    }
+    for(auto it:m){
+        if(c==it.second){
+            cout<<it.first<<endl;
+        break;
+    }
+    }
+    return 0;
+}
