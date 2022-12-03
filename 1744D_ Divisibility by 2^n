@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--){
+   
+        ll n;
+        cin>>n;
+             vector<ll>v(n);
+        ll k,c=0,d=0,ans=0;
+        for(ll i=0;i<n;i++){
+         cin>>k;  
+         // main target 2 to the power n achieve kora//
+         while(k%2==0){
+            c++;// 2 er power akare koto gula ase hisab kore rklm
+            k/=2;
+
+         } 
+        }
+        for(ll i=1;i<=n;i++){
+            k=i;
+            while (k%2==0)
+            {
+                d++;//1 theke n obdi 2 r power koto ase hisab raklm
+                k/=2;
+            }
+            
+            v[i-1]=d;
+            d=0;
+        }
+        sort(v.rbegin(),v.rend());
+        for(ll i=0;i<n;i++){
+         if(c>=n)break;//jodi 2 to the power n pai or tar cheye boro pai thn break karon 2^n pailai seta 2^n dia vagh jabe
+         c+=v[i];//2^n kujtase  
+         ans++;// koyta process lgtase 2^n paita
+        }
+        if(c>=n)cout<<ans<<endl;
+        else cout<<"-1\n";
+
+    
+
+    }
+    return 0;
+}
