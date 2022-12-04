@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--){
+        ll  n;
+        cin>>n;
+        ll arr[n+1];
+        set<ll>s;
+
+        for(ll i=0;i<n;i++){
+            cin>>arr[i];
+            s.insert(arr[i]);
+        }
+        ll d=s.size();
+        if(d==n)cout<<"YES\n";
+        else cout<<"NO\n";
+
+    }
+    return 0;
+}
