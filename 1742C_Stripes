@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+void solve(){
+     string str[8];
+        for(ll i=0;i<8;i++)cin>>str[i];
+       //cin>>str;
+        ll a=0;
+        ll b=0;
+        ll c=0;
+        
+           
+            
+                for(ll i=0;i<8;i++){
+                     a=0;
+            
+            for(ll j=0;j<8;j++){
+                if(str[i][j]=='R')a++;
+                //else if(str[i][j]=='B')b++;
+            }
+             if(a==8){
+                cout<<"R\n";
+                c=1;
+                break;
+             }
+                   
+                }
+                if(c!=1)cout<<"B\n";
+
+            
+           
+}
+
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--){
+        solve();
+           
+        }
+
+    }
+    
